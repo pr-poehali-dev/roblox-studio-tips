@@ -151,7 +151,7 @@ const Index = () => {
             </button>
           </div>
           <Button asChild className="animate-glow hidden md:flex">
-            <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+            <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
               <Icon name="Users" size={18} className="mr-2" />
               Вступить в группу
             </a>
@@ -172,7 +172,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="text-lg animate-glow" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="Users" size={20} className="mr-2" />
                       Вступить в VK
                     </a>
@@ -308,7 +308,7 @@ const Index = () => {
                   </div>
                   
                   <Button size="lg" className="w-full text-lg animate-glow" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="ExternalLink" size={20} className="mr-2" />
                       Открыть группу VK
                     </a>
@@ -383,7 +383,7 @@ const Index = () => {
                     </div>
                   </div>
                   <Button variant="outline" className="w-full" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="Share2" size={18} className="mr-2" />
                       Рассказать друзьям
                     </a>
@@ -418,7 +418,7 @@ const Index = () => {
                     </div>
                   </div>
                   <Button className="w-full animate-glow" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="ExternalLink" size={18} className="mr-2" />
                       Поддержать VK Donut
                     </a>
@@ -481,7 +481,7 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <Button className="w-full" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="Send" size={18} className="mr-2" />
                       Написать в VK
                     </a>
@@ -504,7 +504,7 @@ const Index = () => {
                     В нашей группе ты найдёшь единомышленников, получишь помощь с проектами и будешь в курсе всех новостей Roblox Studio
                   </p>
                   <Button variant="outline" className="w-full" asChild>
-                    <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="UserPlus" size={18} className="mr-2" />
                       Вступить в группу
                     </a>
@@ -538,7 +538,7 @@ const Index = () => {
               </p>
             </div>
             <Button className="w-full" asChild>
-              <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+              <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                 <Icon name="MessageCircle" size={18} className="mr-2" />
                 Обсудить в группе VK
               </a>
@@ -557,7 +557,7 @@ const Index = () => {
             Сообщество разработчиков Roblox Studio
           </p>
           <Button variant="outline" asChild>
-            <a href="https://vk.com/robloxstudiogolds" target="_blank" rel="noopener noreferrer">
+            <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
               <Icon name="ExternalLink" size={16} className="mr-2" />
               vk.com/robloxstudiogolds
             </a>
