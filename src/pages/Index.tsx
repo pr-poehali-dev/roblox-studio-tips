@@ -10,10 +10,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import { useSound } from '@/hooks/useSound';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('main');
   const [selectedTip, setSelectedTip] = useState<any>(null);
+  const { playClick, playHover } = useSound();
 
   // Функция для вибрации и звукового эффекта
   const handleButtonClick = useCallback(() => {
@@ -21,7 +23,9 @@ const Index = () => {
     if (navigator.vibrate) {
       navigator.vibrate(50);
     }
-  }, []);
+    // Звуковой эффект
+    playClick();
+  }, [playClick]);
 
   // Обёртка для кликов по кнопкам
   const handleClick = useCallback((callback?: () => void) => {
@@ -149,23 +153,23 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6">
-            <button onClick={handleClick(() => setActiveSection('main'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
+            <button onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('main'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Главная
             </button>
-            <button onClick={handleClick(() => setActiveSection('tips'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
+            <button onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('tips'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Советы
             </button>
-            <button onClick={handleClick(() => setActiveSection('community'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
+            <button onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('community'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Сообщество
             </button>
-            <button onClick={handleClick(() => setActiveSection('support'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
+            <button onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('support'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Поддержка
             </button>
-            <button onClick={handleClick(() => setActiveSection('contacts'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
+            <button onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('contacts'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Контакты
             </button>
           </div>
-          <Button asChild className="animate-glow hidden md:flex">
+          <Button asChild className="animate-glow hidden md:flex" onMouseEnter={playHover} onClick={handleClick()}>
             <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
               <Icon name="Users" size={18} className="mr-2" />
               Вступить в группу
@@ -186,13 +190,13 @@ const Index = () => {
                   Присоединяйся к сообществу разработчиков, где делятся лучшими советами, скриптами и идеями для твоих проектов
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button size="lg" className="text-lg animate-glow" asChild>
+                  <Button size="lg" className="text-lg animate-glow" asChild onMouseEnter={playHover} onClick={handleClick()}>
                     <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
                       <Icon name="Users" size={20} className="mr-2" />
                       Вступить в VK
                     </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg transition-all duration-200 active:scale-95 hover:scale-105" onClick={handleClick(() => setActiveSection('tips'))}>
+                  <Button size="lg" variant="outline" className="text-lg transition-all duration-200 active:scale-95 hover:scale-105" onMouseEnter={playHover} onClick={handleClick(() => setActiveSection('tips'))}>
                     <Icon name="BookOpen" size={20} className="mr-2" />
                     Смотреть советы
                   </Button>
