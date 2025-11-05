@@ -184,12 +184,13 @@ const Index = () => {
                 </div>
               </div>
               <div className="relative animate-fade-in">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/30 via-blue-500/30 to-pink-500/30 blur-3xl rounded-full animate-pulse"></div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 rounded-2xl blur opacity-30 animate-glow"></div>
+                <div className="absolute inset-0 bg-orange-500/40 blur-3xl animate-pulse"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-500 blur-xl opacity-50 animate-glow"></div>
                 <img 
                   src="https://cdn.poehali.dev/files/64bd6813-8593-442b-9bf8-016209b00d2f.jpg"
                   alt="Roblox Studio"
-                  className="relative rounded-2xl shadow-2xl border border-border/50 ring-2 ring-primary/20"
+                  className="relative shadow-2xl ring-4 ring-orange-500/30 object-cover"
+                  style={{ clipPath: 'inset(0 round 12px)' }}
                 />
               </div>
             </div>
