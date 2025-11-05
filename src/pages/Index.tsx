@@ -418,7 +418,7 @@ const Index = () => {
                     </div>
                   </div>
                   <Button className="w-full animate-glow" asChild>
-                    <a href="https://vk.com/roblox_studio_packs" target="_blank" rel="noopener noreferrer">
+                    <a href="https://vk.com/roblox_studio_packs?w=donut_payment-210646351&levelId=2344" target="_blank" rel="noopener noreferrer">
                       <Icon name="ExternalLink" size={18} className="mr-2" />
                       Поддержать VK Donut
                     </a>
