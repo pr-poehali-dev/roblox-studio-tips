@@ -187,7 +187,7 @@ const Index = () => {
                 <div className="absolute inset-0 bg-orange-500/40 blur-3xl animate-pulse"></div>
                 <div className="absolute -inset-2 bg-gradient-to-r from-orange-500 via-orange-400 to-yellow-500 blur-xl opacity-50 animate-glow"></div>
                 <img 
-                  src="https://cdn.poehali.dev/files/64bd6813-8593-442b-9bf8-016209b00d2f.jpg"
+                  src="https://cdn.poehali.dev/files/f9f4440e-fc4e-48f1-aadd-8c5318e67412.jpg"
                   alt="Roblox Studio"
                   className="relative shadow-2xl ring-4 ring-orange-500/30 object-cover"
                   style={{ clipPath: 'inset(0 round 12px)' }}
