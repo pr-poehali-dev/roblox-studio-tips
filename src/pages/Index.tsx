@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -13,8 +13,23 @@ import {
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('main');
-
   const [selectedTip, setSelectedTip] = useState<any>(null);
+
+  // Функция для вибрации и звукового эффекта
+  const handleButtonClick = useCallback(() => {
+    // Вибрация (работает на мобильных устройствах)
+    if (navigator.vibrate) {
+      navigator.vibrate(50);
+    }
+  }, []);
+
+  // Обёртка для кликов по кнопкам
+  const handleClick = useCallback((callback?: () => void) => {
+    return () => {
+      handleButtonClick();
+      if (callback) callback();
+    };
+  }, [handleButtonClick]);
 
   const tips = [
     {
@@ -134,19 +149,19 @@ const Index = () => {
             </span>
           </div>
           <div className="hidden md:flex gap-6">
-            <button onClick={() => setActiveSection('main')} className="text-foreground/80 hover:text-primary transition-colors">
+            <button onClick={handleClick(() => setActiveSection('main'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Главная
             </button>
-            <button onClick={() => setActiveSection('tips')} className="text-foreground/80 hover:text-primary transition-colors">
+            <button onClick={handleClick(() => setActiveSection('tips'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Советы
             </button>
-            <button onClick={() => setActiveSection('community')} className="text-foreground/80 hover:text-primary transition-colors">
+            <button onClick={handleClick(() => setActiveSection('community'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Сообщество
             </button>
-            <button onClick={() => setActiveSection('support')} className="text-foreground/80 hover:text-primary transition-colors">
+            <button onClick={handleClick(() => setActiveSection('support'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Поддержка
             </button>
-            <button onClick={() => setActiveSection('contacts')} className="text-foreground/80 hover:text-primary transition-colors">
+            <button onClick={handleClick(() => setActiveSection('contacts'))} className="text-foreground/80 hover:text-primary transition-all duration-200 active:scale-95 hover:scale-105">
               Контакты
             </button>
           </div>
@@ -177,7 +192,7 @@ const Index = () => {
                       Вступить в VK
                     </a>
                   </Button>
-                  <Button size="lg" variant="outline" className="text-lg" onClick={() => setActiveSection('tips')}>
+                  <Button size="lg" variant="outline" className="text-lg transition-all duration-200 active:scale-95 hover:scale-105" onClick={handleClick(() => setActiveSection('tips'))}>
                     <Icon name="BookOpen" size={20} className="mr-2" />
                     Смотреть советы
                   </Button>
@@ -244,9 +259,9 @@ const Index = () => {
                     {category.items.map((tip, index) => (
                       <Card 
                         key={index} 
-                        className="border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] animate-slide-up cursor-pointer"
+                        className="border-border/50 bg-card/50 backdrop-blur hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] active:scale-95 hover:shadow-xl animate-slide-up cursor-pointer"
                         style={{ animationDelay: `${index * 100}ms` }}
-                        onClick={() => setSelectedTip(tip)}
+                        onClick={handleClick(() => setSelectedTip(tip))}
                       >
                         <CardHeader>
                           <CardTitle className="flex items-center gap-2">
